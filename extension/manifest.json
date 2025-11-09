@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "OpenFactCheck",
+  "version": "1.0",
+  "description": "Verify highlighted text using OpenFactCheck.",
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+     "16": "images/apple-touch-icon.png",
+     "32": "images/apple-touch-icon.png",
+     "48": "images/apple-touch-icon.png",
+     "128": "images/apple-touch-icon.png"
+  }
+}
